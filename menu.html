@@ -15,223 +15,180 @@
         <!--Scripts-->
         <script src="/docs/5.3/assets/js/color-modes.js"></script>
         <script src="https://kit.fontawesome.com/d2f14e5910.js" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script src="cart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        
         <!--Navbar-->
         <header>
-            <div class="px-3 py-2 border-bottom">
-                <div class="container">
-                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                        <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-black text-decoration-none">
-                            <i class="fa-solid fa-satellite-dish fa-spin-pulse bi me-2" style="color: #87aaaa;"></i>
-                        </a>
-
-                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                            <li>
-                                <a href="#" class="nav-link text-black">
-                                    <i class="fa-solid fa-house-chimney fa-spin-pulse bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>
-                                    Home
+          <div class="px-3 py-2 border-bottom">
+              <div class="container">
+                  <div class="navbar-brand d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                      <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-black text-decoration-none">
+                          <img src="favicon.png" alt="Logo" width="55" height="55" class="d-inline-block align-text-top">
+                          Bakery Shop
+                      </a>
+                      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                          <li>
+                              <a href="index.html" class="nav-link text-black">
+                                  <i class="fa-solid fa-house-chimney bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>
+                                  Home
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#" class="nav-link text-black">
+                                  <i class="fa-solid fa-cake-candles bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>                                    
+                                  Menu
+                              </a>
+                          </li>
+                          <li>
+                              <a href="produce.html" class="nav-link text-black">
+                                  <i class="fa-solid fa-shield-cat bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>
+                                  Produce
+                              </a>
+                          </li>
+                          <!--Dropdown-->
+                          <li>
+                              <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-city bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>                                    
+                                  City
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link text-black">
-                                    <i class="fa-solid fa-cake-candles fa-spin-pulse bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>                                    
-                                    Menu
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link text-black">
-                                    <i class="fa-solid fa-shield-cat fa-spin-pulse bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link text-black">
-                                    <i class="fa-solid fa-cart-plus fa-spin-pulse bi d-block mx-auto mb-1" style="color: #87aaaa;"></i>                                    
-                                    Cart
-                                </a>
-                            </li>
-                            <!--Dropdown we can add City^ and Date^ for dropdown-->
-                            <li>
-                                <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
-                            </li>
-                            <li>
-                                <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                  </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!--Back to top button-->
-        <a id="button"></a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Astana</a></li>
+                                  <li><a class="dropdown-item" href="#">Almaty</a></li>
+                                  <li><a class="dropdown-item" href="#">Shymkent</a></li>
+                                  <li><a class="dropdown-item" href="#">Taraz</a></li>
+                                </ul>
+                                <li>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
+                                </li>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </header>
         <!--Menu Cards-->
 <div class="container mx-auto mt-4">
     <div class="row">
       <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/PDP_Apr_Cake_Cross-Deco_01__68877.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn "><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">CROSS DECORATED CAKE</h5>
+      <p class="card-text text-muted">Add this sweet decoration to your cake—perfect for Easter Sunday brunch dessert! Cake pictured is a 9 inch cake Vanilla Celebration with SusieBlue vanilla buttercream.</p>
+         <a href="#" data-name="Cross Decorated Cake" data-price="138" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
          <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/PDP_May_Cake_Mday-Vintage_02__37703.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn  mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">MOTHER'S DAY VINTAGE DECORATED CAKE</h5>
+      <p class="card-text text-muted">A beautiful vintage decorated cake made perfect for Mother's Day! Add this decoration to any of our specialty cakes.</p>
+      <a href="#" data-name="Mother's day vintage decorated cake" data-price="45" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
             <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/How-To-Make-Fairy-Cakes.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn "><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">ICED FAIRY CAKE</h5>
+      <p class="card-text text-muted">Fairy cakes are a great recipe to introduce your children to baking and are a fun activity for the whole family to enjoy together. In just 25 minutes you'll have made a batch of 12 delicious fairy cakes.</p>
+      <a href="#" data-name="Iced Fairy Cake" data-price="5" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
     </div>
     <div class="divider"></div>
       <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/PDP_May_Cake_SusieBouquet-Deco_01__21806.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">SUSIEBOUQUET DECORATED CAKE</h5>
+      <p class="card-text text-muted">Introducing this new floral decoration for Mother's Day! Add this decoration to any of our specialty cakes.</p>
+      <a href="#" data-name="Susiebouquet decorated cake" data-price="55" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
          <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/photo_2023-04-21_22-19-11.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">WHOOPIE PIE WITH BERRIES</h5>
+      <p class="card-text text-muted">These whoopie pies are soft, cakey cookies studded with tart, juicy blueberries and filled with tangy cream cheese frosting. I take them to family and school events and they are always the first thing gone! A croissant is a buttery, flaky, croissant is a buttery, flaky, </p>
+      <a href="#" data-name="Whoopie pie with berries" data-price="68" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
             <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/photo_2023-04-21_22-19-28.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">RED VELVET CAKE WITH NUTS ON TOP</h5>
+      <p class="card-text text-muted">Red Velvet Cake is a classic, much-loved recipe. The combination of cocoa layers with cream cheese frosting is a southern favorite! A croissant is a buttery, flaky, croissant is a buttery, flaky, croissant is a buttery, flaky, </p>
+      <a href="#" data-name="Red Velvet cake with nuts on top" data-price="72" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
     </div>
     <div class="divider"></div>
       <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/photo_2023-04-21_22-21-29.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">CHOCOLOATE TRUFFLE CAKE</h5>
+      <p class="card-text text-muted">Crafted with the finest ingredients and an abundance of chocolatey goodness, they are a delightful treat for the taste buds and a visual delight for the eyes.</p>
+      <a href="#" data-name="Chocolate Truffle Cake" data-price="70" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
          <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/photo_2023-04-21_22-24-05.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">ITALIAN CIABATTA WITH UNIQUE RECIPE</h5>
+      <p class="card-text text-muted">Ciabatta is a rustic Italian bread that is made from wheat flour, water, olive oil, salt, and yeast. The name means “slipper” in Italian and refers to its elongated, broad, and flat shape. </p>
+      <a href="#" data-name="Italian ciabatta" data-price="10" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
             <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/photo_2023-04-21_22-24-37.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">FRENCH BAGUETTE</h5>
+      <p class="card-text text-muted">If you have eaten at a French restaurant, its likely you have tried this iconic bread. Simply put, a baguette is a long, thin loaf of French bread that is characterized by a crisp crust and chewy center. The ingredients are pure and simple, consisting of water, flour, salt and yeast.</p>
+      <a href="#" data-name="French baguette" data-price="7" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
     </div>
     <div class="divider"></div>  
       <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
+    <img src="images/photo_2023-04-21_22-25-06.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+      <h5 class="card-title">CROISSANT</h5>
+      <p class="card-text text-muted">A croissant is a buttery, flaky, viennoiserie pastry inspired by the shape of the Austrian kipferl but using the French yeast-leavened laminated dough.</p>
+      <a href="#" data-name="Croissant" data-price="5" class="add-to-cart btn btn-primary mr-2"><i class="fa-solid fa-cart-arrow-down"></i>Add to Cart</a>
+      <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> More...</a>
     </div>
     </div>
       </div>    
-         <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
+         
     </div>
     </div>
-      </div>    
-            <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-      <a href="#" class="btn"><i class="fab fa-github"></i> Github</a>
-    </div>
-    </div>
-    </div>
-  </div>
     </div>
     <!--Footer-->
     <div class="container">
@@ -240,15 +197,219 @@
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
               <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
             </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Company, Inc</span>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Bakery Shop. All rights reserved.</span>
           </div>
       
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="fa-brands fa-instagram"></i></a></li>
           </ul>
         </footer>
       </div>
-    </body>
+      <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="cart-table">
+        <table class="show-cart table" id="cart-table">
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var shoppingCart = (function () {
+    var cart = [];
+
+    // Constructor
+    function Item(name, price, count) {
+        this.name = name;
+        this.price = price;
+        this.count = count;
+    }
+
+    // Save cart
+    function saveCart() {
+        sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+    }
+
+    // Load cart
+    function loadCart() {
+        cart = JSON.parse(sessionStorage.getItem('shoppingCart')) || [];
+    }
+
+    if (sessionStorage.getItem('shoppingCart') != null) {
+        loadCart();
+    }
+
+    var obj = {};
+
+    // Add to cart
+    obj.addItemToCart = function (name, price, count) {
+        for (var item in cart) {
+            if (cart[item].name === name) {
+                cart[item].count += count;
+                saveCart();
+                return;
+            }
+        }
+        var item = new Item(name, price, count);
+        cart.push(item);
+        saveCart();
+    };
+
+    // Set count for item
+    obj.setCountForItem = function (name, count) {
+        for (var i in cart) {
+            if (cart[i].name === name) {
+                cart[i].count = count;
+                saveCart();
+                break;
+            }
+        }
+    };
+
+    // Remove item from cart
+    obj.removeItemFromCart = function (name) {
+        for (var item in cart) {
+            if (cart[item].name === name) {
+                cart[item].count--;
+                if (cart[item].count === 0) {
+                    cart.splice(item, 1);
+                }
+                saveCart();
+                break;
+            }
+        }
+    };
+
+    // Remove all items from cart
+    obj.removeItemFromCartAll = function (name) {
+        for (var item in cart) {
+            if (cart[item].name === name) {
+                cart.splice(item, 1);
+                break;
+            }
+        }
+        saveCart();
+    };
+
+    // Clear cart
+    obj.clearCart = function () {
+        cart = [];
+        saveCart();
+    };
+
+    // Count cart
+    obj.totalCount = function () {
+        var totalCount = 0;
+        for (var item in cart) {
+            totalCount += cart[item].count;
+        }
+        return totalCount;
+    };
+
+    // Total cart
+    obj.totalCart = function () {
+        var totalCart = 0;
+        for (var item in cart) {
+            totalCart += cart[item].price * cart[item].count;
+        }
+        return Number(totalCart.toFixed(2));
+    };
+
+    // List cart
+    obj.listCart = function () {
+        var cartCopy = [];
+        for (var i in cart) {
+            item = cart[i];
+            itemCopy = {};
+            for (var p in item) {
+                itemCopy[p] = item[p];
+            }
+            itemCopy.total = Number(item.price * item.count).toFixed(2);
+            cartCopy.push(itemCopy);
+        }
+        return cartCopy;
+    };
+
+    return obj;
+})();
+
+    $(document).ready(function() {
+    // Add item to cart
+    $('.add-to-cart').click(function (event) {
+        event.preventDefault();
+        var name = $(this).data('name');
+        var price = Number($(this).data('price'));
+        shoppingCart.addItemToCart(name, price, 1);
+        displayCart();
+    });
+
+    // Display Cart
+    function displayCart() {
+        var cartArray = shoppingCart.listCart();
+        var output = "";
+        for (var i in cartArray) {
+            output += "<tr>"
+                + "<td>" + cartArray[i].name + "</td>"
+                + "<td>(" + cartArray[i].price + ")</td>"
+                + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+                + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+                + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+                + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+                + " = "
+                + "<td>" + cartArray[i].total + "</td>"
+                + "</tr>";
+        }
+        $('#cart-table').html(output); // Use jQuery to update the table
+        $('.total-cart').html(shoppingCart.totalCart());
+        $('.total-count').html(shoppingCart.totalCount());
+    }
+
+// Delete item button
+$('.show-cart').on("click", ".delete-item", function (event) {
+    var name = $(this).data('name')
+    shoppingCart.removeItemFromCartAll(name);
+    displayCart();
+});
+
+// -1
+$('.show-cart').on("click", ".minus-item", function (event) {
+    var name = $(this).data('name')
+    shoppingCart.removeItemFromCart(name);
+    displayCart();
+});
+
+// +1
+$('.show-cart').on("click", ".plus-item", function (event) {
+    var name = $(this).data('name');
+    shoppingCart.addItemToCart(name, 1);
+    displayCart();
+});
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function (event) {
+    var name = $(this).data('name');
+    var count = Number($(this).val());
+    shoppingCart.setCountForItem(name, count);
+    displayCart();
+});
+
+displayCart();
+});
+</script> 
+</body>
 </html>

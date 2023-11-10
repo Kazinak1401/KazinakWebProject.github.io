@@ -75,3 +75,10 @@ header {
     font-style: italic;
     color: #96a2a7;
   }
+#congratulations {
+    margin: auto;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+  
